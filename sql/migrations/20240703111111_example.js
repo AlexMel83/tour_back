@@ -75,7 +75,6 @@ export const up = async (knex) => {
 export const down = async (knex) => {
   const trx = await knex.transaction();
   try {
-
     await trx.schema.dropTableIfExists('panoramas');
     await trx.schema.dropTableIfExists('tokens');
     await trx.schema.dropTableIfExists('users');

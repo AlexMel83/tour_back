@@ -24,7 +24,7 @@ const usersData = [
     password: '$2b$04$7TfkL/l51rWdgD/KZuDste4UcdOTAltQtVoM9hZvuGalnZmq/r73i',
     role: 'user',
     isactivated: 'true',
-    name: "Олександр",
+    name: 'Олександр',
     surname: 'Мелешко',
   },
 ];
