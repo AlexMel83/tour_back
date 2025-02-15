@@ -35,10 +35,8 @@ const server = http.createServer(app);
 
 const allowedOrigins = [
   ...(CLIENT_URL.split(',') || 'http://localhost:3000'),
-  'https://radavpo.starkon.pp.ua',
-  'https://devradavpo.starkon.pp.ua',
-  'https://memory.pp.ua',
-  'https://dev.memory.pp.ua',
+  'https://tour.starkon.pp.ua',
+  'https://devtour.starkon.pp.ua',
   'http://localhost:8788',
   'http://127.0.0.1:8788',
   PAYMENT_DOMEN || 'https://www.liqpay.ua',
@@ -85,7 +83,7 @@ app.use(
       secure: process.env.NODE_ENV === 'production',
       httpOnly: true,
       maxAge: sessionMaxAge,
-      domain: '.memory.pp.ua',
+      domain: '.starkon.pp.ua',
       sameSite: 'lax',
     },
     name: 'sessionId',
@@ -101,6 +99,6 @@ app.use((req, res, next) => {
   next();
 });
 
-server.listen(PORT | 4040, () => {
-  console.log(`Server is running on port ${PORT | 4040}.`);
+server.listen(PORT | 5050, () => {
+  console.log(`Server is running on port ${PORT | 5050}.`);
 });
